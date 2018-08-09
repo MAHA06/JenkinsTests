@@ -21,12 +21,9 @@ sh "chmod -R +x *"
            stage('Unit Tests') {
             steps {
                 gradlew('test')
+                 junit 'reports/**/*.xml'
             }
-            post {
-                always {
-                    junit '**/build/test-results/test/TEST-*.xml'
-                }
-            }
+            
         }
 
     }
