@@ -56,7 +56,7 @@ public class GreetingControllerTests {
     public void noValue() throws Exception
     {
     	Mockito.when(mocked.getValue()).thenReturn(99);
-    	Assert.assertEquals("99", controller.test());
+    	Assert.assertEquals("98", controller.test());
     	}
     
     @Test
